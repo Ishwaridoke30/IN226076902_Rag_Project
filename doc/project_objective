@@ -1,0 +1,19 @@
+**  RAG-Based Student Management Assistant using LangGraph & HITL  **
+1. Project Objective 
+The objective of this project is to design and implement an AI-powered Student 
+Management Assistant using Retrieval-Augmented Generation (RAG). The system 
+enables users to interact with student data using natural language queries and receive 
+accurate, context-aware responses. 
+This system processes student-related data from a PDF or structured dataset, 
+converts it into embeddings, and stores it in a vector database for eAicient retrieval. 
+When a user submits a query, the system retrieves the most relevant information and 
+generates a meaningful response using a Large Language Model (LLM). 
+The project also integrates a graph-based workflow using LangGraph to manage 
+execution flow and decision-making. Based on the query intent and confidence level, 
+the system intelligently routes responses. For complex or ambiguous queries, it 
+incorporates a Human-in-the-Loop (HITL) mechanism to ensure accuracy and 
+reliability. 
+ Key goals of the system include: - Enabling intelligent search and retrieval of student information - Providing context-aware and accurate responses - Reducing manual eAort in accessing student records - Supporting scalable and modular AI system design - Enhancing reliability through human-assisted validation 
+This project demonstrates the practical implementation of RAG architecture 
+combined with workflow orchestration and explainable AI, making it suitable for real
+world student information systems.
