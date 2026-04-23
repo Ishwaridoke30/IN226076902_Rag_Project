@@ -1,0 +1,4 @@
+##student data
+Priya, BBA, 21
+Amit, BCA, 22
+Sneha, MCA, 23
