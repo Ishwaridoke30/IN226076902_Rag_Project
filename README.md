@@ -1,4 +1,4 @@
-** RAG-Based Student Support System**
+# RAG-Based Customer Support Assistant
 
 🧠 Project Overview
 
