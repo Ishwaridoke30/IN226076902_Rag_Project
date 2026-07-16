@@ -2,45 +2,143 @@
 
 ## Summary
 
-An AI-powered Student Support Assistant built using Retrieval-Augmented Generation (RAG). The system processes PDF and text documents, retrieves relevant information using vector embeddings, and generates accurate, context-aware answers with a Large Language Model (LLM).
+The RAG-Based Student Support Assistant is an AI-powered application that helps students quickly find accurate answers from academic documents. It uses Retrieval-Augmented Generation (RAG) to retrieve relevant information from uploaded PDF and text files and then generates context-aware responses using a Large Language Model (LLM). This reduces the time students spend searching through study materials and improves access to information.
+
+---
 
 ## Background
 
-Students often spend a lot of time searching through study materials to find answers. This project helps them quickly retrieve relevant information from uploaded documents using AI.
+Students often have to search through large amounts of study material to find answers to their questions. This process is time-consuming and can reduce productivity.
+
+This project aims to solve these problems:
+
+- Students spend too much time searching through notes and documents.
+- Important information is difficult to locate quickly.
+- Traditional keyword search often fails to understand the meaning of a question.
+- Students need a simple AI assistant that can answer questions based on their own study materials.
+
+The project uses Retrieval-Augmented Generation (RAG) so that answers are generated from uploaded documents rather than relying only on the language model's built-in knowledge.
+
+---
 
 ## How is it used?
 
-Users upload academic documents and ask questions in natural language. The system searches the documents and provides accurate answers based on the retrieved content.
+A student uploads one or more academic documents such as lecture notes, PDFs, or text files.
+
+The system performs the following steps:
+
+1. Loads the uploaded documents.
+2. Splits the documents into smaller text chunks.
+3. Creates vector embeddings for each chunk.
+4. Stores the embeddings in a vector database.
+5. Searches for the most relevant information when a question is asked.
+6. Sends the retrieved information to the language model.
+7. Returns an accurate, context-aware answer.
+
+### Example
+
+**Question:**
+
+```
+What is the attendance rule?
+```
+
+**Answer:**
+
+```
+The assistant retrieves the relevant section from the uploaded document and provides the correct attendance policy.
+```
+
+---
 
 ## Data sources and AI methods
 
-- PDF and text documents
+### Data Sources
+
+- Academic PDF documents
+- Text files
+- Student notes
+- Course documentation
+
+### AI Methods
+
+- Retrieval-Augmented Generation (RAG)
+- Semantic Search
+- Vector Embeddings
+- Similarity Search
+- Large Language Models (LLMs)
+
+### Technologies Used
+
+- Python
 - LangChain
 - LangGraph
 - ChromaDB / FAISS
 - Hugging Face Embeddings
-- Large Language Models (LLMs)
-
-## Challenges
-
-- Depends on the quality of uploaded documents.
-- May not answer questions outside the provided documents.
-- Retrieval quality depends on embeddings and chunking strategy.
-
-## What next?
-
-- Web interface
-- Multi-language support
-- Voice assistant
-- Chat history
-- Better retrieval accuracy
-
-## Acknowledgments
-
-This project was created for learning Retrieval-Augmented Generation (RAG) and AI-powered document question answering.
+- OpenAI / LLM
+- GitHub
+- VS Code
 
 ---
 
-## ⭐ Acknowledgements
+## Challenges
 
-This project was developed for learning Retrieval-Augmented Generation (RAG), document retrieval, and AI-powered question answering using LangChain, LangGraph, and vector databases.
+Although the system provides useful answers, it has some limitations:
+
+- The quality of answers depends on the uploaded documents.
+- It cannot answer questions that are unrelated to the available documents.
+- Incorrect or incomplete documents may produce inaccurate answers.
+- Very large document collections may increase processing time.
+
+---
+
+## What next?
+
+Future improvements include:
+
+- Web interface using Streamlit or FastAPI
+- Voice-based interaction
+- Multi-language support
+- Chat history
+- User authentication
+- Better document management
+- Support for images and scanned PDFs
+- Improved retrieval accuracy using advanced embedding models
+
+---
+
+## Project Structure
+
+```
+RAG-Project/
+│
+├── data/
+│   └── student.txt
+│
+├── docs/
+│   ├── HLD.pdf
+│   ├── LLD.pdf
+│   ├── Project Objective.pdf
+│   └── Technical Documentation.pdf
+│
+├── src/
+│   ├── main.py
+│   ├── loader.py
+│   ├── retriever.py
+│   ├── generator.py
+│   └── utils.py
+│
+└── README.md
+
+
+## Acknowledgments
+
+This project was developed as part of learning Artificial Intelligence and Retrieval-Augmented Generation (RAG). It demonstrates how modern AI techniques can improve information retrieval and provide intelligent, context-aware assistance for students.
+
+Special thanks to:
+
+- Elements of AI / Building AI
+- University of Helsinki
+- Reaktor
+- LangChain Community
+- Hugging Face
